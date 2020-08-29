@@ -1,14 +1,10 @@
 kind: pipeline
 type: kubernetes
-name: greeting
+name: default
 
 steps:
-- name: en
-  image: alpine
+- name: test
+  image: golang:1.13
   commands:
-  - echo hello world
-
-- name: fr
-  image: alpine
-  commands:
-  - echo bonjour monde
+  - go build
+  - go test -v
