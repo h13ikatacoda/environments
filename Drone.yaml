@@ -1,5 +1,6 @@
 #Drone CI File!
 #Commit Message: Drone! Captain Canary is here! 
+#09/06 09:26
 
 kind: pipeline
 type: kubernetes
