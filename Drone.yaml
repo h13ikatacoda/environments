@@ -1,7 +1,8 @@
 #Drone CI File!
 #Commit Message: Drone! Captain Canary is here! 
-#09/06 09:26
-#09/06 09:49
+#09/06 09:26 Drone.yaml
+#09/06 09:49 main.go
+#09/06 09:49 Dockerfile
 
 kind: pipeline
 type: kubernetes
