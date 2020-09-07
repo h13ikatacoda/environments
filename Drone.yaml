@@ -8,34 +8,23 @@ kind: pipeline
 type: kubernetes
 name: default
 
-pipeline:
-  deploy:
-    image: quay.io/honestbee/drone-kubernetes
-    kubernetes_server: https://c100-e.jp-tok.containers.cloud.ibm.com:30413
-    kubernetes_token: Vu_i5huGQswiZkWFblOcNqmhZgQDgDdSvNTrQEuabws
-    namespace: test-app
-    deployment: my-deployment
-    repo: hsugatest01/drone-test
-    container: my-container
-    tag: mytag
+steps:
 
-#steps:
-#
-#- name: build
-#  image: golang:1.13
-#  commands:
-#    - "go build -o ./myapp"
-#
-#- name: publish  
-#  image: plugins/docker
-#  settings:
-#    username:
-#      from_secret: docker_username
-#    password:
-#      from_secret: docker_password
-#    repo: hsugatest01/drone-test
-#    auto_tag: true
-#    auto_tag_suffix: drone-build
+- name: build
+  image: golang:1.13
+  commands:
+    - "go build -o ./myapp"
+
+- name: publish  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: hsugatest01/drone-test
+    auto_tag: true
+    auto_tag_suffix: drone-build
 
 #pipeline:
 #  deploy:
