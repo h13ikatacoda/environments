@@ -26,13 +26,13 @@ steps:
     auto_tag: true
     auto_tag_suffix: drone-build
 
-#pipeline:
-#  deploy:
-#    image: quay.io/honestbee/drone-kubernetes
-#    kubernetes_server: https://c100-e.jp-tok.containers.cloud.ibm.com:30413
-#    kubernetes_token: BjJ-igtRW72YzvWH_a7p96TokiwKf-rjsREU8RYHeXU
-#    namespace: test-app
-#    deployment: my-deployment
-#    repo: hsugatest01/drone-test
-#    container: my-container
-#    tag: mytag
+pipeline:
+  deploy:
+    image: quay.io/honestbee/drone-kubernetes
+    kubernetes_server: https://c100-e.jp-tok.containers.cloud.ibm.com:30413
+    kubernetes_token: Vu_i5huGQswiZkWFblOcNqmhZgQDgDdSvNTrQEuabws
+    namespace: test-app
+    deployment: my-deployment
+    repo: hsugatest01/drone-test
+    container: my-container
+    tag: mytag
